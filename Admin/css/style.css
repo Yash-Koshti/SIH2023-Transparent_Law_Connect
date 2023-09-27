@@ -1,0 +1,59 @@
+.pwdchange-modal,.delacc-modal,.editacc-modal {
+  background-color: #1d1f22 !important;
+  color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.footer-copyright {
+    text-transform: uppercase;
+}
+.form-control {
+    height: 50px;
+    border-radius: 0;
+}
+.acc-dropdown {
+    background-color: #343a40;
+}
+.acc-li:hover {
+    background-color: #999999;
+}
+
+ /* for input type=number arrows
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button 
+ {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+ input[type=number] 
+ {
+   -moz-appearance: textfield !important;
+ } */
+
+ textarea {
+     resize: none;
+ }
+
+ #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 70px;
+ }
+
+.submit-btn {
+    text-align: center;
+}
+ 

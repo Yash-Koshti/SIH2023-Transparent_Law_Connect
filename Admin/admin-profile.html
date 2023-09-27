@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Profile</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+
+<body>
+
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html" class="temp-logo"><img src="assets/img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <i class="fas fa-user"></i>Admin<b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-menu-right acc-dropdown" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item text-light acc-li" href="admin-profile.html">My Profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-light acc-li" href="#">Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content  -->
+  <div class="container emp-profile">
+    <form method="post">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-img">
+            <img src="assets/img/rohit.jpg" alt="" />
+            <div class="file btn btn-lg btn-primary pe-auto" id="photochange">
+              Change Photo
+              <input type="file" name="file" />
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="profile-work">
+              <a href="" data-toggle="modal" data-target="#editaccModal">Edit Profile</a><br />
+              <a href="" data-toggle="modal" data-target="#pwdchangeModal">Change Password</a><br />
+              <a href="" data-toggle="modal" data-target="#delaccModal">Delete Account</a><br />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="profile-head ms-auto">
+            <h1>
+              Rohit Shukla
+            </h1>
+          </div>
+          <div class="col-md-12 mt-5">
+            <div class="tab-content profile-tab" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>First Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Rohit</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Last Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Shukla</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Email Address</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>shuklarohit@gmail.com</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal  -->
+  <div class="row">
+
+    <!-- Edit Account Modal  -->
+    <div class="modal fade" id="editaccModal" tabindex="-1" role="dialog" aria-labelledby="editaccLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content editacc-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Account</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" value="Rohit">
+              </div>
+  
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" value="Shukla">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="text" class="form-control" id="email" value="shuklarohit@gmail.com">
+              </div>
+
+              <div class="submit-btn">
+                <button type="submit" class="btn btn-outline-light">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password Change Modal  -->
+    <div class="modal fade" id="pwdchangeModal" tabindex="-1" role="dialog" aria-labelledby="pwdchangeLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content pwdchange-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="oldpwd">Old Password</label>
+                <input type="password" class="form-control" id="oldpwd" aria-describedby="oldpwdHelp"
+                  placeholder="Old Password">
+                <!-- <small id="oldpwdHelp" class="form-text text-muted">We'll never share your oldpwd with anyone else.</small> -->
+              </div>
+              <div class="form-group">
+                <label for="newpwd">New Password</label>
+                <input type="password" class="form-control" id="newpwd" placeholder="New Password">
+              </div>
+              <div class="form-group">
+                <label for="confirmpwd">Confirm New Password</label>
+                <input type="password" class="form-control" id="confirmpwd" placeholder="Confirm New Password">
+              </div>
+              <div class="submit-btn">
+                <button type="submit" class="btn btn-outline-light">Change</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Account Modal  -->
+    <div class="modal fade" id="delaccModal" tabindex="-1" role="dialog" aria-labelledby="delaccLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content delacc-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" id="pwd" aria-describedby="pwdHelp"
+                  placeholder="Enter Password">
+
+              </div>
+              <div class="submit-btn">
+                <button type="submit" class="btn btn-outline-light">Delete Account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
